@@ -1,0 +1,37 @@
+{
+    "term": "Term 2 — 2025",
+    "clubs": [
+        {
+            "name": "STEM Robotics Club",
+            "category": "Academic",
+            "teacher": "Mr. Harris",
+            "schedule": "Tuesday · 15:30–17:00",
+            "room": "IT Lab",
+            "description": "Hands-on robotics, programming (Arduino & LEGO EV3), and preparing for STEM competitions."
+        },
+        {
+            "name": "Basketball Varsity",
+            "category": "Sports",
+            "teacher": "Coach Daniel",
+            "schedule": "Monday & Thursday · 16:00–17:30",
+            "room": "Sports Hall",
+            "description": "Training sessions for varsity-level basketball players. Physical conditioning & team strategy."
+        },
+        {
+            "name": "Art & Illustration Club",
+            "category": "Arts",
+            "teacher": "Ms. Patel",
+            "schedule": "Wednesday · 15:30–17:00",
+            "room": "Art Studio",
+            "description": "Exploring digital and traditional illustration, sketching, and portfolio building."
+        },
+        {
+            "name": "Community Service Club",
+            "category": "Service",
+            "teacher": "Dr. Nguyen",
+            "schedule": "Friday · 15:30–17:30",
+            "room": "Library Room 2",
+            "description": "Organising charity events, donation drives, and school-wide volunteering projects."
+        }
+    ]
+}

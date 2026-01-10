@@ -1,0 +1,100 @@
+/* ==== PAGE WRAPPER ==== */
+.page {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ===== TITLES ===== */
+.page h1 {
+    font-family: 'EB Garamond', serif;
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    /* spacing giữa h1 & h3 */
+}
+
+.page h3 {
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 4px;
+    margin-bottom: 24px;
+    /* spacing trước form */
+    color: #374151;
+}
+
+/* ===== FORM WRAPPER ===== */
+.support-form {
+    background: white;
+    padding: 32px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid #E5E7EB;
+}
+
+/* ===== LABEL ===== */
+.support-form label {
+    font-size: 15px;
+    font-weight: 600;
+    color: #1F2937;
+    display: block;
+    margin-bottom: 6px;
+}
+
+/* ===== SELECT & INPUT ===== */
+.support-form select,
+.support-form input[type="text"],
+.support-form textarea {
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 15px;
+    border: 1px solid #D1D5DB;
+    border-radius: 8px;
+    background: #F9FAFB;
+    color: #111827;
+    margin-bottom: 20px;
+    transition: 0.15s ease;
+}
+
+.support-form select:focus,
+.support-form input[type="text"]:focus,
+.support-form textarea:focus {
+    outline: none;
+    border-color: #4F46E5;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+/* ===== TEXTAREA ===== */
+.support-form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* ===== ATTACHMENT ===== */
+.support-form input[type="file"] {
+    margin-top: 6px;
+    margin-bottom: 20px;
+}
+
+/* ===== SUBMIT BUTTON ===== */
+.submit-btn {
+    width: 100%;
+    padding: 14px 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    background: #0D1B2A;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.15s ease;
+}
+
+.submit-btn:hover {
+    background: #10233A;
+}
+
+.submit-btn:active {
+    background: #0B1622;
+}

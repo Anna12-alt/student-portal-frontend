@@ -1,0 +1,150 @@
+{
+    "year": "Year 11",
+    "term": "Term 2",
+    "week": "Week 4",
+    "schedule": {
+        "Monday": [
+            {
+                "period": "P1",
+                "time": "08:00 - 08:50",
+                "subject": "Mathematics",
+                "teacher": "Mr. Collins",
+                "room": "E204"
+            },
+            {
+                "period": "P2",
+                "time": "08:55 - 09:45",
+                "subject": "English First Language",
+                "teacher": "Ms. Evans",
+                "room": "B102"
+            },
+            {
+                "period": "P3",
+                "time": "10:05 - 10:55",
+                "subject": "ICT",
+                "teacher": "Mr. Harris",
+                "room": "IT Lab"
+            },
+            {
+                "period": "P4",
+                "time": "11:00 - 11:50",
+                "subject": "Chemistry",
+                "teacher": "Dr. Nguyen",
+                "room": "Lab 3"
+            },
+            {
+                "period": "P5",
+                "time": "13:00 - 13:50",
+                "subject": "Physics",
+                "teacher": "Dr. Nguyen",
+                "room": "Lab 2"
+            }
+        ],
+        "Tuesday": [
+            {
+                "period": "P1",
+                "time": "08:00 - 08:50",
+                "subject": "Global Perspectives",
+                "teacher": "Mr. Young",
+                "room": "C310"
+            },
+            {
+                "period": "P2",
+                "time": "08:55 - 09:45",
+                "subject": "Business Studies",
+                "teacher": "Ms. Patel",
+                "room": "B104"
+            },
+            {
+                "period": "P3",
+                "time": "10:05 - 10:55",
+                "subject": "Mathematics",
+                "teacher": "Mr. Collins",
+                "room": "E204"
+            },
+            {
+                "period": "P4",
+                "time": "11:00 - 11:50",
+                "subject": "Vietnamese",
+                "teacher": "Ms. Dang",
+                "room": "A105"
+            }
+        ],
+        "Wednesday": [
+            {
+                "period": "P1",
+                "time": "08:00 - 08:50",
+                "subject": "English First Language",
+                "teacher": "Ms. Evans",
+                "room": "B102"
+            },
+            {
+                "period": "P2",
+                "time": "08:55 - 09:45",
+                "subject": "Chemistry",
+                "teacher": "Dr. Nguyen",
+                "room": "Lab 3"
+            },
+            {
+                "period": "P3",
+                "time": "10:05 - 10:55",
+                "subject": "Physics",
+                "teacher": "Dr. Nguyen",
+                "room": "Lab 2"
+            },
+            {
+                "period": "P4",
+                "time": "11:00 - 11:50",
+                "subject": "ICT",
+                "teacher": "Mr. Harris",
+                "room": "IT Lab"
+            }
+        ],
+        "Thursday": [
+            {
+                "period": "P1",
+                "time": "08:00 - 08:50",
+                "subject": "Mathematics",
+                "teacher": "Mr. Collins",
+                "room": "E204"
+            },
+            {
+                "period": "P2",
+                "time": "08:55 - 09:45",
+                "subject": "Global Perspectives",
+                "teacher": "Mr. Young",
+                "room": "C310"
+            },
+            {
+                "period": "P3",
+                "time": "10:05 - 10:55",
+                "subject": "Business Studies",
+                "teacher": "Ms. Patel",
+                "room": "B104"
+            }
+        ],
+        "Friday": [
+            {
+                "period": "P1",
+                "time": "08:00 - 08:50",
+                "subject": "English First Language",
+                "teacher": "Ms. Evans",
+                "room": "B102"
+            },
+            {
+                "period": "P2",
+                "time": "08:55 - 09:45",
+                "subject": "Chemistry",
+                "teacher": "Dr. Nguyen",
+                "room": "Lab 3"
+            },
+            {
+                "period": "P3",
+                "time": "10:05 - 10:55",
+                "subject": "Business Studies",
+                "teacher": "Ms. Patel",
+                "room": "B104"
+            }
+        ]
+    }
+}

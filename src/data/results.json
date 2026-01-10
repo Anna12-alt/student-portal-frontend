@@ -1,0 +1,50 @@
+[
+    {
+        "subject": "English First Language",
+        "grade": "A*",
+        "term": "Term 2",
+        "teacher": "Ms. Evans"
+    },
+    {
+        "subject": "Mathematics",
+        "grade": "A",
+        "term": "Term 2",
+        "teacher": "Mr. Collins"
+    },
+    {
+        "subject": "ICT",
+        "grade": "A",
+        "term": "Term 2",
+        "teacher": "Mr. Harris"
+    },
+    {
+        "subject": "Business Studies",
+        "grade": "B",
+        "term": "Term 2",
+        "teacher": "Ms. Patel"
+    },
+    {
+        "subject": "Physics",
+        "grade": "B",
+        "term": "Term 2",
+        "teacher": "Dr. Nguyen"
+    },
+    {
+        "subject": "Chemistry",
+        "grade": "B",
+        "term": "Term 2",
+        "teacher": "Dr. Nguyen"
+    },
+    {
+        "subject": "Global Perspectives",
+        "grade": "A",
+        "term": "Term 2",
+        "teacher": "Mr. Young"
+    },
+    {
+        "subject": "Vietnamese",
+        "grade": "A",
+        "term": "Term 2",
+        "teacher": "Ms. Dang"
+    }
+]

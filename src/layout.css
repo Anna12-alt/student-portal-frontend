@@ -1,0 +1,47 @@
+/* ===== LAYOUT WRAPPER ===== */
+.layout {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    /* sidebar + content tự scroll */
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+    width: 260px;
+    background: #0D1B2A;
+    color: white;
+    padding: 2rem;
+
+    height: 100vh;
+    /* ⭐ full height */
+    flex-shrink: 0;
+    overflow-y: auto !important;
+    /* ⭐ cho scroll */
+}
+
+/* ===== MAIN CONTENT ===== */
+.main-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: #F6F8FC;
+}
+
+/* ===== FIXED HEADER ===== */
+.topbar {
+    padding: 16px 32px;
+    background: white;
+    border-bottom: 1px solid #E5E7EB;
+    flex-shrink: 0;
+}
+
+/* ===== PAGE CONTENT (scroll chính) ===== */
+.page-content {
+    flex: 1;
+    overflow-y: auto;
+    /* ⭐ scroll nội dung */
+    padding: 32px;
+}
