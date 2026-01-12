@@ -1,0 +1,82 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-box {
+  width: 500px;
+  background-color: #ffffff;
+  color: #000000;
+  padding: 30px 25px;
+  border-radius: 15px;
+  box-shadow: 0 0 25px rgba(0,0,0,0.5);
+}
+
+/* Top section */
+.profile-top {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.avatar {
+  width: auto;
+  height: 110px;
+  margin-bottom: 10px;
+}
+
+.profile-top h2 {
+  margin: 0;
+  font-size: 22px;
+}
+
+/* Grid info */
+.profile-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.field label {
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+.field input,
+.field select {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid black;
+  font-size: 14px;
+}
+
+/* Save button */
+#saveBtn {
+  width: 100%;
+  margin-top: 25px;
+  padding: 10px;
+  background-color: #000000;
+  color: #ffffff;
+  font-weight: bold;
+  border: 1px solid black;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#saveBtn:hover {
+  background-color: #dbdbdb;
+  color:#000000;
+}

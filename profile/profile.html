@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Student Profile</title>
+  <link rel="stylesheet" href="profile.css" />
+</head>
+<body>
+
+  <div class="profile-box">
+    <!-- TOP -->
+    <div class="profile-top">
+      <img src="../img/user2-removebg-preview.png" alt="Avatar" class="avatar" id="avatarImg">
+      <h2 id="userName">Student Name</h2>
+    </div>
+
+    <!-- GRID INFO -->
+    <div class="profile-grid">
+      <div class="field">
+        <label>Email</label>
+        <input type="email" id="email" readonly>
+      </div>
+
+      <div class="field">
+  <label>Major</label>
+  <select id="major">
+    <option value="">Select major</option>
+    <option value="Computer Science">Computer Science</option>
+    <option value="Information Technology">Information Technology</option>
+    <option value="Business Administration">Business Administration</option>
+    <option value="Marketing">Marketing</option>
+    <option value="International Business">International Business</option>
+    <option value="Graphic Design">Graphic Design</option>
+    <option value="Software Engineering">Software Engineering</option>
+    <option value="Data Science">Data Science</option>
+  </select>
+</div>
+
+
+      <div class="field">
+        <label>Student ID</label>
+        <input type="text" id="studentId" placeholder="Your student ID">
+      </div>
+
+      <div class="field">
+        <label>Status</label>
+        <select id="status">
+          <option value="active">Active</option>
+          <option value="inactive">Inactive</option>
+        </select>
+      </div>
+    </div>
+
+    <button id="saveBtn">Edit profile</button>
+  </div>
+
+  <script src="profile.js"></script>
+</body>
+</html>
