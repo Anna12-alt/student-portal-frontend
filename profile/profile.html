@@ -1,59 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Student Profile</title>
   <link rel="stylesheet" href="profile.css" />
 </head>
+
 <body>
 
   <div class="profile-box">
-    <!-- TOP -->
-    <div class="profile-top">
-      <img src="../img/user2-removebg-preview.png" alt="Avatar" class="avatar" id="avatarImg">
-      <h2 id="userName">Student Name</h2>
+
+    <!-- TAB BUTTONS -->
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="info">Profile</button>
+      <button class="tab-btn" data-tab="club-tab">Clubs</button>
+      <button class="tab-btn" data-tab="card">Student Card</button>
+      <button class="tab-btn" data-tab="settings">Settings</button>
     </div>
 
-    <!-- GRID INFO -->
-    <div class="profile-grid">
-      <div class="field">
-        <label>Email</label>
-        <input type="email" id="email" readonly>
+    <!-- ===== TAB: PROFILE INFO ===== -->
+    <div class="tab-content active" id="info">
+
+      <!-- TOP -->
+      <div class="profile-top">
+        <img src="../img/user2-removebg-preview.png" alt="Avatar" class="avatar">
+        <h2 id="userName">Student Name</h2>
       </div>
 
-      <div class="field">
-  <label>Major</label>
-  <select id="major">
-    <option value="">Select major</option>
-    <option value="Computer Science">Computer Science</option>
-    <option value="Information Technology">Information Technology</option>
-    <option value="Business Administration">Business Administration</option>
-    <option value="Marketing">Marketing</option>
-    <option value="International Business">International Business</option>
-    <option value="Graphic Design">Graphic Design</option>
-    <option value="Software Engineering">Software Engineering</option>
-    <option value="Data Science">Data Science</option>
-  </select>
+      <!-- GRID INFO -->
+      <div class="profile-grid">
+        <div class="field">
+          <label>Email</label>
+          <input type="email" id="email" readonly>
+        </div>
+
+        <div class="field">
+          <label>Grade / Class</label>
+          <input type="text" id="gradeClass" readonly>
+        </div>
+
+        <div class="field">
+          <label>Student ID</label>
+          <input type="text" id="studentId" readonly>
+        </div>
+
+        <div class="field">
+          <label>Club</label>
+          <select id="club">
+            <option value="">None</option>
+            <option value="Science Club">Science Club</option>
+            <option value="IT Club">IT Club</option>
+            <option value="Art Club">Art Club</option>
+            <option value="Music Club">Music Club</option>
+            <option value="Sports Club">Sports Club</option>
+          </select>
+        </div>
+      </div>
+
+      <button id="saveBtn">Save Profile</button>
+    </div>
+
+    <!-- ===== TAB: CLUB ===== -->
+    <div class="tab-content" id="club-tab">
+  <h3>My Club</h3>
+
+  <p><strong>Club:</strong> <span id="clubName">None</span></p>
+  <p><strong>Status:</strong> <span id="clubRole">Participant</span></p>
+
+  <button id="applyClubBtn">Apply for Official Member</button>
+
+  <hr>
+
+  <h4>Contact Club Admin</h4>
+  <textarea id="clubMessage" placeholder="Type your question here..."></textarea>
+  <button id="sendClubMsg">Send</button>
+
+  <p id="clubStatusMsg"></p>
 </div>
 
 
-      <div class="field">
-        <label>Student ID</label>
-        <input type="text" id="studentId" placeholder="Your student ID">
+    <!-- ===== TAB: STUDENT CARD ===== -->
+    <div class="tab-content" id="card">
+      <div id="student-card">
+        <img src="../img/user2-removebg-preview.png" class="avatar">
+        <h3 id="cardName">Student Name</h3>
+        <p id="cardClass">Grade / Class</p>
+        <p id="cardId">Student ID</p>
+        <p id="cardClub">Club</p>
       </div>
-
-      <div class="field">
-        <label>Status</label>
-        <select id="status">
-          <option value="active">Active</option>
-          <option value="inactive">Inactive</option>
-        </select>
-      </div>
+      <button id="downloadCard">Download Student Card</button>
     </div>
 
-    <button id="saveBtn">Edit profile</button>
+    <!-- ===== TAB: SETTINGS ===== -->
+    <div class="tab-content" id="settings">
+      <h3>Change Password</h3>
+      <input type="password" id="oldPw" placeholder="Old Password">
+      <input type="password" id="newPw" placeholder="New Password">
+      <button id="changePw">Change Password</button>
+
+      <hr>
+
+      <button id="logoutBtn" class="logout">Log Out</button>
+    </div>
+
   </div>
 
   <script src="profile.js"></script>
 </body>
+
 </html>

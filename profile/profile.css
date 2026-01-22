@@ -80,3 +80,63 @@ body {
   background-color: #dbdbdb;
   color:#000000;
 }
+
+/* ===== Tabs ===== */
+.tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid black;
+  background: #f2f2f2;
+  cursor: pointer;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.tab-btn.active {
+  background: black;
+  color: white;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* Student card */
+#student-card {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+#student-card p {
+  margin: 5px 0;
+}
+
+/* Settings */
+#settings input {
+  width: 100%;
+  margin: 8px 0;
+  padding: 8px;
+}
+
+.logout {
+  background: rgb(21, 21, 21);
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+}
