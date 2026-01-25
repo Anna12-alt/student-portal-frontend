@@ -7,7 +7,7 @@ const saveBtn = document.getElementById("saveBtn");
 
 let isEditing = false;
 
-// Load dữ liệu
+
 function loadProfile() {
   const username = localStorage.getItem("username") || "Student Name";
   const email = localStorage.getItem("useremail") || "student@email.com";
@@ -36,7 +36,7 @@ function lockFields() {
   isEditing = false;
 }
 
-// Mở field (chỉ cho chỉnh Club)
+// Mở field 
 function unlockFields() {
   clubSelect.disabled = false;
 
@@ -49,12 +49,21 @@ saveBtn.addEventListener("click", () => {
     unlockFields();
   } else {
     localStorage.setItem("club", clubSelect.value);
+
+    localStorage.removeItem("clubRequestSent");
+    clubRequestSent = false;
+
+
     document.getElementById("clubName").innerText =
-    clubSelect.value || "None";
+      clubSelect.value || "None";
+
     currentUser.club = clubSelect.value;
     localStorage.setItem("currentUser", JSON.stringify(currentUser));
+
     document.getElementById("cardClub").innerText =
       "Club: " + (currentUser.club || "None");
+
+    updateClubTab();
 
     lockFields();
     alert("Profile updated successfully!");
@@ -91,37 +100,92 @@ const statusMsg = document.getElementById("clubStatusMsg");
 const clubName = localStorage.getItem("club");
 let clubRole = localStorage.getItem("clubRole") || "Participant";
 
+
+let clubRequestSent = localStorage.getItem("clubRequestSent") === "true";
+
+
 if (clubNameEl) clubNameEl.innerText = clubName || "None";
 if (clubRoleEl) clubRoleEl.innerText = clubRole;
+
+
+
+
+function updateClubTab() {
+  clubRoleEl.innerText = "Participant";
+
+  const club = localStorage.getItem("club");
+
+  if (!club) {
+    clubNameEl.innerText = "None";
+    clubRoleEl.innerText = "-";
+    statusMsg.innerText = "You haven't joined any clubs.";
+
+    applyBtn.style.display = "none";
+    msgInput.style.display = "none";
+    sendBtn.style.display = "none";
+  } else {
+    clubNameEl.innerText = club;
+    clubRoleEl.innerText = "Participant";
+    statusMsg.innerText = "";
+
+    applyBtn.style.display = "inline-block";
+    msgInput.style.display = "block";
+    sendBtn.style.display = "inline-block";
+
+    if (clubRequestSent) {
+      statusMsg.innerText = "Your request has been sent.";
+      applyBtn.disabled = true;
+    } else {
+      applyBtn.disabled = false;
+    }
+  }
+}
+
+
+updateClubTab();
+
 
 // Apply role
 if (applyBtn) {
   applyBtn.addEventListener("click", () => {
-    if (!clubName) {
-      statusMsg.innerText = "You have not joined any club.";
+
+    const club = localStorage.getItem("club"); 
+
+    if (!club) { 
+      statusMsg.innerText = "You haven't joined any clubs.";
       return;
     }
 
-    if (clubRole === "Official Member") {
-      statusMsg.innerText = "You are already an official member.";
+    
+    if (clubRequestSent) {
+      statusMsg.innerText = "Your request has already been sent.";
       return;
     }
 
-    clubRole = "Official Member";
-    localStorage.setItem("clubRole", clubRole);
+  
+    clubRequestSent = true;
+    localStorage.setItem("clubRequestSent", "true");
 
-    clubRoleEl.innerText = clubRole;
-    statusMsg.innerText = "Application successful. You are now an official member.";
+    statusMsg.innerText = "Your request has been sent.";
+    applyBtn.disabled = true;
+
+
+
+
   });
 }
 
 // Send message
 if (sendBtn) {
   sendBtn.addEventListener("click", () => {
-    if (!clubName) {
-      statusMsg.innerText = "You must join a club first.";
+
+    const club = localStorage.getItem("club"); 
+
+    if (!club) { 
+      statusMsg.innerText = "You haven't joined any clubs.";
       return;
     }
+
 
     if (msgInput.value.trim() === "") {
       statusMsg.innerText = "Please enter a message.";
@@ -134,7 +198,7 @@ if (sendBtn) {
 }
 
 
-// ===== ADD FOR STUDENT CARD (DO NOT TOUCH ABOVE CODE) =====
+
 
 // tạo currentUser từ dữ liệu đã có (login / signup)
 const currentUser = {
@@ -160,6 +224,73 @@ if (cardName) {
   cardId.innerText = "Student ID: " + currentUser.studentId;
   cardClub.innerText = "Club: " + (currentUser.club || "None");
 }
+
+// ===== CHANGE PASSWORD =====
+const oldPwInput = document.getElementById("oldPw");
+const newPwInput = document.getElementById("newPw");
+const changePwBtn = document.getElementById("changePw");
+const pwMsg = document.getElementById("pwMsg");
+
+if (changePwBtn) {
+  changePwBtn.addEventListener("click", () => {
+    const oldPw = oldPwInput.value.trim();
+    const newPw = newPwInput.value.trim();
+    const savedPw = localStorage.getItem("password");
+
+    
+    pwMsg.textContent = "";
+    pwMsg.className = "error-msg";
+    oldPwInput.classList.remove("input-error");
+    newPwInput.classList.remove("input-error");
+
+    // check trống
+    if (!oldPw || !newPw) {
+      pwMsg.textContent = "Please fill in all fields.";
+      if (!oldPw) oldPwInput.classList.add("input-error");
+      if (!newPw) newPwInput.classList.add("input-error");
+      return;
+    }
+
+    // check old password
+    if (oldPw !== savedPw) {
+      pwMsg.textContent = "Old password is incorrect.";
+      oldPwInput.classList.add("input-error");
+      return;
+    }
+
+    // success
+    localStorage.setItem("password", newPw);
+    pwMsg.textContent = "Password changed successfully!";
+    pwMsg.className = "success-msg";
+
+    oldPwInput.value = "";
+    newPwInput.value = "";
+  });
+}
+
+
+
+const logoutBtn = document.getElementById("logoutBtn");
+// ===== LOGOUT HANDLER =====
+if (logoutBtn) {
+  logoutBtn.addEventListener("click", () => {
+
+    // === RESET CLUB ===
+    localStorage.removeItem("club");
+    localStorage.removeItem("clubRequestSent");
+    localStorage.removeItem("clubRole");
+
+    // === RESET currentUser.club nếu có ===
+    const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+    if (currentUser) {
+      currentUser.club = "";
+      localStorage.setItem("currentUser", JSON.stringify(currentUser));
+    }
+
+    window.location.href = "../info/info.html";
+  });
+}
+
 
 
 
