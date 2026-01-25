@@ -1,0 +1,138 @@
+/* Reset cơ bản */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #fff;
+  color: #000;
+  padding-top: 70px; 
+  overflow-x: hidden;
+}
+
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  justify-content: flex-end; 
+  align-items: center;
+  padding: 0 20px; 
+  box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+  z-index: 1000;
+}
+
+.profile-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+
+.profile-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-link a {
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 16px;
+  user-select: none;
+}
+
+.profile-link a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  user-select: none;
+}
+
+
+.welcome-section {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  padding: 40px 20px 30px;
+  background: linear-gradient(to right, #17171e, #b5b5bd);
+  color: white;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+h1 {
+    font-size: 40px;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+/* Main content */
+.main-content {
+  min-height: calc(100vh - 70px);
+}
+
+/* Features grid */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.feature-card {
+  aspect-ratio: 5 / 3; /* ô vuông */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* thay center -> flex-start */
+  align-items: center;          /* căn giữa ngang */
+  padding: 25px 20px;
+  border-radius: 12px;
+  background-color: #000;
+  color: #f0f0f6;
+  box-shadow: 0 0 18px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease;
+  cursor: default;
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+}
+
+.feature-card h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+  font-weight: 700;
+  text-align: center; /* căn giữa h3 */
+  width: 100%;        /* đảm bảo text dài sẽ wrap đúng */
+}
+
+.feature-card p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+  text-align: center; /* tuỳ chọn, có thể căn giữa luôn */
+  margin: 0;
+  color:#cbcbd9;
+}
