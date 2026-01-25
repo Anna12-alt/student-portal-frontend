@@ -5,33 +5,35 @@
   box-sizing: border-box;
 }
 
+/* ⭐ FORCE ARIAL SANS-SERIF FOR ALL TEXT ⭐ */
+* {
+  font-family: Arial, sans-serif !important;
+}
+
 /* ===== GLOBAL ===== */
 html,
 body {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  /* cho layout quản lý scroll */
+  /* layout scroll quản lý */
 }
 
 #root {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  /* để sidebar + content scroll riêng */
 }
 
 body {
-  font-family: 'Inter', sans-serif;
   background: #F6F8FC;
   color: #1F2937;
 }
 
-/* Typography */
+/* ===== HEADINGS (font đã force bên trên, chỉ chỉnh weight) ===== */
 h1,
 h2,
 h3 {
-  font-family: 'EB Garamond', serif;
-  font-weight: 600;
+  font-weight: 700;
   color: #1F2937;
 }

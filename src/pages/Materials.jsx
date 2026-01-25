@@ -3,33 +3,42 @@ import "./Materials.css";
 
 export default function Materials() {
   return (
-    <div className="page">
+    <div className="page materials-page">
+
       <h1>Study Materials — {materials.term}</h1>
 
-      <div className="materials-list">
-        {materials.subjects.map((subj, i) => (
-          <div key={i} className="subject-section">
-            <h2 className="subject-title">{subj.subject}</h2>
+      {materials.materials.map((subject, index) => (
+        <div key={index} className="subject-section">
 
-            <div className="material-table">
-              {subj.materials.map((item, idx) => (
-                <div key={idx} className="material-row">
-                  <div className="material-icon">📄</div>
+          {/* Subject title */}
+          <h2 className="subject-title">{subject.subject}</h2>
 
-                  <div className="material-info">
-                    <div className="material-name">{item.title}</div>
+          <div className="materials-list">
+            {subject.items.map((item, i) => (
+              <div key={i} className="material-card">
+
+                {/* PDF icon + text */}
+                <div className="material-left">
+                  <span className="pdf-icon">📄</span>
+                  <div>
+                    <div className="material-title">{item.title}</div>
                     <div className="material-type">{item.type}</div>
                   </div>
-
-                  <a href={item.link} className="download-btn">
-                    Download
-                  </a>
                 </div>
-              ))}
-            </div>
+
+                {/* Download button */}
+                <a href={item.file} download className="download-btn">
+                  Download
+                </a>
+
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
+        </div>
+      ))}
+
     </div>
   );
 }
+
+

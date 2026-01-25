@@ -1,30 +1,35 @@
 {
     "books": [
         {
+            "id": 1,
             "title": "To Kill a Mockingbird",
             "author": "Harper Lee",
             "subject": "Literature",
             "status": "Available"
         },
         {
+            "id": 2,
             "title": "A Brief History of Time",
             "author": "Stephen Hawking",
             "subject": "Science",
             "status": "Checked Out"
         },
         {
+            "id": 3,
             "title": "The Great Gatsby",
             "author": "F. Scott Fitzgerald",
             "subject": "Literature",
             "status": "Available"
         },
         {
+            "id": 4,
             "title": "Atomic Habits",
             "author": "James Clear",
             "subject": "Self-Development",
             "status": "Available"
         },
         {
+            "id": 5,
             "title": "Sapiens: A Brief History of Humankind",
             "author": "Yuval Noah Harari",
             "subject": "History",

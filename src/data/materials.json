@@ -1,48 +1,28 @@
 {
     "term": "Term 2",
-    "subjects": [
+    "materials": [
         {
             "subject": "Mathematics",
-            "materials": [
+            "items": [
                 {
                     "title": "Algebra Revision Worksheet",
                     "type": "PDF",
-                    "link": "#"
+                    "file": "/materials/algebra-revision.pdf"
                 },
                 {
                     "title": "Trigonometry Formula Sheet",
                     "type": "PDF",
-                    "link": "#"
+                    "file": "/materials/trigonometry-formula.pdf"
                 }
             ]
         },
         {
             "subject": "English First Language",
-            "materials": [
+            "items": [
                 {
                     "title": "Essay Structure Guide",
                     "type": "PDF",
-                    "link": "#"
-                },
-                {
-                    "title": "Language Techniques Notes",
-                    "type": "PDF",
-                    "link": "#"
-                }
-            ]
-        },
-        {
-            "subject": "Chemistry",
-            "materials": [
-                {
-                    "title": "Atomic Structure Notes",
-                    "type": "PDF",
-                    "link": "#"
-                },
-                {
-                    "title": "Lab Safety Instructions",
-                    "type": "PDF",
-                    "link": "#"
+                    "file": "/materials/essay-structure.pdf"
                 }
             ]
         }

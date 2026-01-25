@@ -1,70 +1,67 @@
-.page {
-    padding-right: 20px;
-}
-
-.materials-list {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-    margin-top: 20px;
+.materials-page h1 {
+    margin-bottom: 20px;
 }
 
 .subject-section {
     background: white;
     padding: 24px;
+    margin-bottom: 30px;
     border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
 }
 
 .subject-title {
-    font-family: 'EB Garamond', serif;
-    font-size: 24px;
+    font-size: 1.5rem;
     margin-bottom: 16px;
-}
-
-.material-table {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.material-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 14px 18px;
-    background: #F9FAFB;
-    border-radius: 10px;
-    border: 1px solid #E5E7EB;
-}
-
-.material-icon {
-    font-size: 20px;
-}
-
-.material-info {
-    flex: 1;
-    margin-left: 12px;
-}
-
-.material-name {
-    font-weight: 600;
+    font-family: 'EB Garamond', serif;
     color: #1F2937;
 }
 
+.materials-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.material-card {
+    background: #F9FAFB;
+    padding: 16px 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #E5E7EB;
+}
+
+.material-left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.pdf-icon {
+    font-size: 26px;
+}
+
+.material-title {
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: #111827;
+}
+
 .material-type {
-    font-size: 13px;
+    font-size: 0.85rem;
     color: #6B7280;
 }
 
 .download-btn {
     background: #0D1B2A;
     color: white;
-    padding: 8px 14px;
+    padding: 8px 18px;
     border-radius: 8px;
-    font-size: 14px;
+    font-size: 0.9rem;
     text-decoration: none;
-    transition: 0.2s;
+    transition: 0.2s ease;
 }
 
 .download-btn:hover {
