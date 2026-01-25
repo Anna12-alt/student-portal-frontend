@@ -23,11 +23,13 @@ if (signupForm) {
       return;
     }
 
-    // Lưu tên và email để profile dùng
+    
     localStorage.setItem("username", name);
     localStorage.setItem("useremail", email);
+    localStorage.setItem("password", password);
 
-    // Chuyển sang home
-    window.location.href = "../home/home.html";
+    alert("Account created successfully!");
+    
+    window.location.href = "../login/login.html";
   });
 }

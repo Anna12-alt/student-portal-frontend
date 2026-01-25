@@ -16,11 +16,25 @@ if (loginForm) {
       return;
     }
 
-    // Lưu tên và email vào localStorage để profile dùng
+const savedName = localStorage.getItem("username");
+    const savedEmail = localStorage.getItem("useremail");
+    const savedPassword = localStorage.getItem("password");
+
+
+    if (
+      name !== savedName ||
+      email !== savedEmail ||
+      password !== savedPassword
+    ) {
+      error.textContent = "Invalid login information.";
+      return;
+    }
+
+   
     localStorage.setItem("username", name);
     localStorage.setItem("useremail", email);
 
-    // Chuyển sang home
+    
     window.location.href = "../home/home.html";
   });
 }
